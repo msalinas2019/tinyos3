@@ -36,8 +36,8 @@ static inline void initialize_PCB(PCB* pcb)
   pcb->pstate = FREE;
   pcb->argl = 0;
   pcb->args = NULL;
-  pcb->thread_counter = 0; //testtest12test
-  rlnode_init(&pcb->PTCB_list, pcb); //mipos auto kanei segmentation?
+  pcb->thread_count = 0; //testtest12test
+  rlnode_init(&pcb->thread_list, pcb); //mipos auto kanei segmentation?
 
   for(int i=0;i<MAX_FILEID;i++)
     pcb->FIDT[i] = NULL;
